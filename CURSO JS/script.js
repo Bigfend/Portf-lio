@@ -1,0 +1,1 @@
+function pesquisar(){var e=document.getElementById("search-input").value;if(""!==e.trim()){var t="https://www.google.com/search?q="+encodeURIComponent(e);window.location.href=t}}document.getElementById("search-input").addEventListener("keyup",function(e){"Enter"===e.key&&pesquisar()});

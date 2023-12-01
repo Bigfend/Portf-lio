@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="container">
+        <section id="bloco">
+            <div id="DIVfirst">
+                <h1>
+                    Calculadora Simples
+                </h1>
+            </div>
+
+            <div class="SOMA">
+                <input type="number" name="txtn1" id="txtn1">
+                <p class="MAIS">+</p>
+                <input type="number" name="txtn2" id="txtn2">
+                <input type="button" value="Calcular" onclick="calcular()" id="botão">
+            </div>
+            <div id="res">Resultado</div>
+        </section>
+
+    </main>
+    <!--JS INTERNO-->
+    <script>
+        function calcular() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = [n1 + n2, n1 - n2, n1 * n2, n1 / n2];
+            res.innerHTML = ` Os calculos de ${n1} e ${n2} são
+            <br>
+            <br> SOMANDO: ${s[0]}
+            <br>
+            <br> SUBTRAINDO: ${s[1]}
+            <br>
+            <br> MULTIPLICANDO: ${s[2]}
+            <br>
+            <br> DIVIDINDO: ${s[3]}`
+        }
+    </script>
+    <!--JS INTERNO-->
+</body>
+
+</html>

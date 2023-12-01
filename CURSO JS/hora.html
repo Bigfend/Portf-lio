@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hora.css">
+    <title>Horas</title>
+</head>
+<body>
+<div>
+    <h2 id="texto">
+        Essa é a hora e data do seu dispositivo
+    </h2>
+</div>
+<div id="DIVCOUNT">
+    <p id="dataehora">
+</div>
+
+</p>
+
+<script>
+     function atualizarDataHora() {
+            var dataHora = new Date();
+            var dia = dataHora.getDate();
+            var mes = dataHora.getMonth() + 1;
+            var ano = dataHora.getFullYear();
+            var horas = dataHora.getHours();
+            var minutos = dataHora.getMinutes();
+            var segundos = dataHora.getSeconds();
+
+            var dataHoraFormatada = dia + "/" + mes + "/" + ano + " " + horas + ":" + minutos + ":" + segundos;
+
+            document.getElementById("dataehora").textContent = dataHoraFormatada;
+            }
+
+            atualizarDataHora();
+            setInterval(atualizarDataHora, 1000);
+</script>
+</body>
+</html>

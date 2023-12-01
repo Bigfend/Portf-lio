@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSnaPRÁTICA</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body id="BG">
+    <header>
+        <h1>
+            PORTFÓLIO DE JAVA SCRIPT
+        </h1>
+
+        <p>
+            esse site tem intuito de mostrar o que sei fazer com Java Script.
+        </p>
+    </header>
+    <main>
+    <div id="DIVfirst">
+        <h1>
+            Calculadora Simples
+        </h1>
+        <section>
+            <div class="SOMA">
+                <input type="number" name="txtn1" id="txtn1">
+                    <p class="MAIS">+</p>
+                <input type="number" name="txtn2" id="txtn2">
+                <input type="button" value="Calcular" onclick="calcular()" id="botão">
+            </div>
+            <div id="res">Resultado</div>
+    </div>
+    </main>
+
+<!--JS INTERNO-->
+    <script>
+    function calcular()
+{
+    var tn1 = window.document.getElementById ('txtn1')
+    var tn2 = window.document.getElementById ('txtn2')
+    var res = window.document.getElementById ('res')
+    var n1 = Number (tn1.value)
+    var n2 = Number (tn2.value)
+    var s = [n1 + n2, n1 - n2, n1 * n2, n1 / n2];
+    res.innerHTML = ` Os calculos de ${n1} e ${n2} são
+        <br>
+        <br> SOMANDO: ${s[0]}
+        <br>
+        <br> SUBTRAINDO: ${s[1]}
+        <br>
+        <br> MULTIPLICANDO: ${s[2]}
+        <br>
+        <br> DIVIDIINDO: ${s[3]}`
+}
+    </script>
+<!--JS INTERNO-->
+<section>
+    <div id="DIVH">
+        <a id="data-hora" href="hora.html">Data e Hora do Sistema</a>
+    </div>
+</section>
+
+<section>
+    <div id="DIVpesquisa">
+        <a id="linkpesquisa" href="pesquisas.html">
+            PESQUISAS
+        </a>
+    </div>
+
+    <div id="imcDIV">
+        <a id="imcLINK" href="imc.html">
+            Calculadora de IMC
+        </a>
+    </div>
+</section>
+</body>
+</html>
